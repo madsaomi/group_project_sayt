@@ -1,7 +1,7 @@
-from flask_sqlalchemy import SQLAlchemy
+from extensions import db
 from datetime import datetime
 
-db = SQLAlchemy()
+# db = SQLAlchemy() - Removed to avoid circular imports
 
 class Product(db.Model):
     id = db.Column(db.Integer, primary_key=True)
